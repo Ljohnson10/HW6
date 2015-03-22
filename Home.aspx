@@ -16,7 +16,7 @@
 </h2>
 
  <div id="Navs">
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server">Contact</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutUs.aspx">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server">Contact</asp:HyperLink>
     </div>
  </div>   
     
@@ -53,7 +53,7 @@
         <Columns>
             <asp:BoundField DataField="recName" HeaderText="Recipe Name" SortExpression="recName" />
             <asp:BoundField DataField="author" HeaderText="Submitted By" SortExpression="author" />
-            <asp:HyperLinkField DataNavigateUrlFields="recID" DataNavigateUrlFormatString="Details.aspx?recID={0}" Text="Select" />
+            <asp:HyperLinkField DataNavigateUrlFields="recID" DataNavigateUrlFormatString="Details.aspx?recID={0}" HeaderText="Details" Text="Select" />
         </Columns>
     </asp:GridView>
     </form>

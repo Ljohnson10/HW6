@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <div id="topOfPage">
+<div id="topOfPage">
 <h1>
     Wicked Easy Recipes
 </h1>
@@ -16,9 +16,9 @@
 </h2>
 
  <div id="Navs">
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server">Contact</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutUs.aspx">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server">Contact</asp:HyperLink>
     </div>
- </div>   
+</div>   
     <form id="form1" runat="server">
     <div>
     
@@ -54,6 +54,8 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
+        <asp:Label ID="lbl_deletedRec" runat="server"></asp:Label>
+    
     </div>
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recID" DataSourceID="Sql_recipes" Height="50px" Width="125px">
             <Fields>
@@ -66,7 +68,7 @@
                 <asp:BoundField DataField="ing5" HeaderText="Ingredient #5" SortExpression="ing5" />
                 <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
                 <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField ShowEditButton="True" />
+                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
             </Fields>
         </asp:DetailsView>
     </form>
