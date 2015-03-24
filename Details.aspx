@@ -4,10 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Recipe Details</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="topOfPage">
+<div class="thin">
+<div class="topOfPage">
 <h1>
     Wicked Easy Recipes
 </h1>
@@ -15,7 +17,7 @@
     Using 5 Ingredients or Less!
 </h2>
 
- <div id="Navs">
+ <div class="Navs">
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutUs.aspx">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
     </div>
 </div>   
@@ -56,21 +58,204 @@
     
         <asp:Label ID="lbl_deletedRec" runat="server"></asp:Label>
     
+        <br />
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="recID" DataSourceID="Sql_recipes">
+            <EditItemTemplate>
+                <table>
+                    <tr>
+                        <td class="left">
+                            Recipe Name
+
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="tbRecNameDet" runat="server" Text='<%# Bind("recName") %>' />
+
+                        </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfvRecNameDet" runat="server" ErrorMessage="Please enter a recipe name!" ControlToValidate="tbRecNameDet"></asp:RequiredFieldValidator>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Submitted By
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="tbAuthorDet" runat="server" Text='<%# Bind("author") %>' />
+                        </td>
+                         <td>
+                            <asp:RequiredFieldValidator ID="rfvAuthorDet" runat="server" ErrorMessage="Please enter an author name!" ControlToValidate="tbAuthorDet"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Ingredient #1
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="tbIng1Det" runat="server" Text='<%# Bind("ing1") %>' />
+                        </td>
+                         <td>
+                            <asp:RequiredFieldValidator ID="rfvIng1Det" runat="server" ErrorMessage="Please enter an ingredient!" ControlToValidate="tbIng1Det"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #2
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("ing2") %>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #3
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("ing3") %>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #4
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("ing4") %>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #5
+                        </td>
+                        <td class="right">
+                             <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("ing5") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Preparation
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("prep") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Notes
+                        </td>
+                        <td class="right">
+                            <asp:TextBox ID="TextBox9" runat="server" Text='<%# Bind("notes") %>' />
+                        </td>
+                    </tr>
+                    
+                </table>
+                <div class="buttons">
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                </div> 
+                
+                
+            </EditItemTemplate>
+            <InsertItemTemplate>
+               
+            </InsertItemTemplate>
+            <ItemTemplate>
+                <table>
+                    <tr>
+                        <td class="left">
+                            Recipe Name
+
+                        </td>
+                        <td class="right">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("recName") %>' />
+                        </td>
+                        
+
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Submitted By
+                        </td>
+                        <td class="right">
+                             <asp:Label ID="Label2" runat="server" Text='<%# Bind("author") %>' />
+                        </td>
+                         
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Ingredient #1
+                        </td>
+                        <td class="right">
+                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("ing1") %>' />
+                        </td>
+                         
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #2
+                        </td>
+                        <td class="right">
+                            <asp:Label ID="Label4" runat="server" Text='<%# Bind("ing2")%>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #3
+                        </td>
+                        <td class="right">
+                            <asp:Label ID="Label5" runat="server" Text='<%# Bind("ing3")%>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #4
+                        </td>
+                        <td class="right">
+                            <asp:Label ID="Label6" runat="server" Text='<%# Bind("ing4")%>' />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="left">
+                            Ingredient #5
+                        </td>
+                        <td class="right">
+                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("ing5")%>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Preparation
+                        </td>
+                        <td class="right">
+                             <asp:Label ID="Label8" runat="server" Text='<%# Bind("prep") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            Notes
+                        </td>
+                        <td class="right">
+                           <asp:Label ID="Label9" runat="server" Text='<%# Bind("notes") %>' />
+                        </td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+               
+               
+               <div class="buttons">
+                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+               </div>
+            </ItemTemplate>
+        </asp:FormView>
+    
     </div>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recID" DataSourceID="Sql_recipes" Height="50px" Width="125px">
-            <Fields>
-                <asp:BoundField DataField="recName" HeaderText="Recipe Name" SortExpression="recName" />
-                <asp:BoundField DataField="author" HeaderText="Submitted By" SortExpression="author" />
-                <asp:BoundField DataField="ing1" HeaderText="Ingredient #1" SortExpression="ing1" />
-                <asp:BoundField DataField="ing2" HeaderText="Ingredient #2" SortExpression="ing2" />
-                <asp:BoundField DataField="ing3" HeaderText="Ingredient #3" SortExpression="ing3" />
-                <asp:BoundField DataField="ing4" HeaderText="Ingredient #4" SortExpression="ing4" />
-                <asp:BoundField DataField="ing5" HeaderText="Ingredient #5" SortExpression="ing5" />
-                <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
-                <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
-            </Fields>
-        </asp:DetailsView>
+        <p class="legal">
+        &copy; 2015. 6K:183 Software Design & Development 
+    </p>
     </form>
+</div>
 </body>
 </html>

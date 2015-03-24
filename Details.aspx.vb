@@ -2,13 +2,14 @@
 Partial Class Details
     Inherits System.Web.UI.Page
 
-    Protected Sub DetailsView1_ItemDeleted(sender As Object, e As DetailsViewDeletedEventArgs) Handles DetailsView1.ItemDeleted
+ 
+    Protected Sub FormView1_ItemDeleted1(sender As Object, e As FormViewDeletedEventArgs) Handles FormView1.ItemDeleted
         Dim deletedRec As String = e.Values("recName").ToString()
-        lbl_deletedRec.text = deletedRec & " has been removed from the database."
+        lbl_deletedRec.Text = deletedRec & " has been removed from the database."
         Response.AddHeader("REFRESH", "3;URL=./Home.aspx")
     End Sub
 
-    Protected Sub DetailsView1_ItemUpdated(sender As Object, e As DetailsViewUpdatedEventArgs) Handles DetailsView1.ItemUpdated
+    Protected Sub FormView1_ItemUpdated(sender As Object, e As FormViewUpdatedEventArgs) Handles FormView1.ItemUpdated
         Response.AddHeader("REFRESH", "3;URL=./Home.aspx")
     End Sub
 End Class

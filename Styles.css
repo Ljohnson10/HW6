@@ -1,0 +1,52 @@
+﻿body {
+    text-align: center;
+    background-color: #D2B48C;
+}
+form{
+    display: inline-block;
+    text-align: center;
+}
+
+.legal{
+    font-size: 12px;
+    
+}
+#GridView1 th{
+    background-color: #FFFF99;
+    color: #F08080
+}
+#GridView1{
+    background-color: #F08080;
+    color: #FFFF99;
+}
+.topOfPage{
+    color: #F08080;
+    margin-top: 40px;
+}
+.Navs a{
+    color: #696969;
+}
+#aboutUs{
+    margin:150px;
+    text-align: left;
+    color: #F08080;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.thin{
+    background-color: white;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.left{
+    text-align:right;
+    background-color:#FFFF99;
+    color: #F08080;
+}
+.right{
+    text-align:left;
+    background-color: #F08080;
+    color:#FFFF99;
+}

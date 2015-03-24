@@ -4,10 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Home</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="topOfPage">
+<div class="thin">
+<div class="topOfPage">
 <h1>
     Wicked Easy Recipes
 </h1>
@@ -15,7 +17,7 @@
     Using 5 Ingredients or Less!
 </h2>
 
- <div id="Navs">
+ <div class="Navs">
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutUs.aspx">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
     </div>
  </div>   
@@ -49,7 +51,7 @@
             <asp:Parameter Name="recID" Type="Int32" />
         </UpdateParameters>
         </asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="Sql_recipes" AutoGenerateColumns="False">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="Sql_recipes" AutoGenerateColumns="False" AllowPaging="True" Height="92px" Width="520px">
         <Columns>
             <asp:BoundField DataField="recName" HeaderText="Recipe Name" SortExpression="recName" />
             <asp:BoundField DataField="author" HeaderText="Submitted By" SortExpression="author" />
@@ -57,5 +59,9 @@
         </Columns>
     </asp:GridView>
     </form>
+    <p class="legal">
+        &copy; 2015. 6K:183 Software Design & Development 
+    </p>
+</div>
 </body>
 </html>

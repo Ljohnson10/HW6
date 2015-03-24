@@ -4,13 +4,14 @@ Partial Class newRec
 
 
 
-    Protected Sub DetailsView1_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles DetailsView1.ItemInserted
+  
 
+
+    Protected Sub FormView1_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles FormView1.ItemInserted
         Response.Redirect("./Home.aspx")
-
     End Sub
 
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        DetailsView1.Focus()
+    Protected Sub FormView1_Load(sender As Object, e As EventArgs) Handles FormView1.Load
+        FormView1.Focus()
     End Sub
 End Class

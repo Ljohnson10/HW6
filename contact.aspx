@@ -4,10 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Contact Us</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="topOfPage">
+    <div class="thin">
+    <div class="topOfPage">
 <h1>
     Wicked Easy Recipes
 </h1>
@@ -15,7 +17,7 @@
     Using 5 Ingredients or Less!
 </h2>
 
- <div id="Navs">
+ <div class="Navs">
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/newRec.aspx">New Recipe</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/aboutUs.aspx">About Us</asp:HyperLink>&nbsp;| <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
     </div>
 </div>
@@ -27,7 +29,7 @@
         <% If Not IsPostBack Then%>
 
         Your email address:<br />
-        <asp:TextBox ID="senderAddress" runat="server"  ></asp:TextBox>
+        <asp:TextBox ID="senderAddress" runat="server" Height="16px" Width="285px"  ></asp:TextBox>
         <br />
         <br />
        
@@ -35,7 +37,7 @@
 
          Your message:<br /> 
         
-        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="30" TextMode="MultiLine"  ></asp:TextBox>
+        <asp:TextBox ID="senderMessage" runat="server" Rows="20" Columns="50" TextMode="MultiLine"  ></asp:TextBox>
         
         <br />
         <br />
@@ -51,6 +53,10 @@
         
         <%End If%>
     </div>
+        <p class="legal">
+        &copy; 2015. 6K:183 Software Design & Development 
+    </p>
     </form>
+    </div>
 </body>
 </html>
