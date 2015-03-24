@@ -137,6 +137,9 @@
                         <td>
                             <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("prep") %>' />
                         </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfvPrep" runat="server" ErrorMessage="Please enter preparation instructions!" ControlToValidate="TextBox8"></asp:RequiredFieldValidator>
+                        </td>
                     </tr>
                     <tr>
                         <td class="left">
