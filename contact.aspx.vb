@@ -22,7 +22,7 @@ Partial Class contact
         sendersMessage = senderMessage.Text.ToString().Replace(Environment.NewLine, "<br />")   ' get the text from the message textbox keep text box formatting by replacing new lines (returns) with <br/>
 
 
-        msg.To.Add("michael-colbert@uiowa.edu")  'destination email address
+        msg.To.Add("ui.6k183@gmail.com")  'destination email address
         msg.From = New MailAddress("ui.6k183@gmail.com")  'account used to send the email.
         msg.ReplyToList.Add(sendersEmail) 'set the senders email address as the "reply to" for easy of sending a response
         msg.Subject = "User Contact"  'set the message subject line
