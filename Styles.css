@@ -1,6 +1,6 @@
 ﻿body {
     text-align: center;
-    background-color: #D2B48C;
+    background-color: white;
 }
 form{
     display: inline-block;
@@ -50,3 +50,34 @@ form{
     background-color: #F08080;
     color:#FFFF99;
 }
+.Buttons {
+   border-top: 1px solid #696969;
+   background: #878087;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a8a1a8), to(#878087));
+   background: -webkit-linear-gradient(top, #a8a1a8, #878087);
+   background: -moz-linear-gradient(top, #a8a1a8, #878087);
+   background: -ms-linear-gradient(top, #a8a1a8, #878087);
+   background: -o-linear-gradient(top, #a8a1a8, #878087);
+   padding: 6.5px 13px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #d2b48c;
+   font-size: 10px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.Buttons:hover {
+   border-top-color: #696969;
+   background: #696969;
+   color: #d2b48c;
+   }
+.Buttons:active {
+   border-top-color: #696969;
+   background: #696969;
+   }

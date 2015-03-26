@@ -41,7 +41,7 @@
         
         <br />
         <br />
-        <asp:Button ID="sendMail" runat="server" Text="Send" />
+        <asp:Button ID="sendMail" runat="server" Text="Send" CssClass="Buttons" />
 
         
         <%Else%>
